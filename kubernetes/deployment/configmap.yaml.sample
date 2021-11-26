@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: autoscaler-config-default
+  namespace: autoscaler
+data:
+  INCLUSTER_CONFIG: "1"
+  SUPERVISOR_ENDPOINT: "192.168.220.3"
+  SUPERVISOR_SA_TOKEN: "xxxxxxxxxxxxxxx"
+  SUPERVISOR_NAMESPACE: "dev"
+  WORKLOAD_CLUSTERS: "app1"
+  SCRIPT_FREQ_MIN: "1"
+  MAX_NODE_COUNT: "3"
+  MIN_NODE_COUNT: "1"
+  MIN_AVAIL_MEM_PERCENTAGE: "30"
+  MIN_AVAIL_CPU_PERCENTAGE: "20"

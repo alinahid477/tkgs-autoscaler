@@ -8,9 +8,12 @@ RUN apt-get update \
 ADD https://github.com/krallin/tini/releases/download/v0.19.0/tini /sbin/tini
 RUN chmod +x /sbin/tini && mkdir -p /user/autoscaler && mkdir -p /app
 ADD . /app
+RUN chmod +x /app/autoscale.sh
+
 
 RUN useradd autoscaler --uid 9999 -M -U --home-dir /user/autoscaler
 USER autoscaler
 WORKDIR /user/autoscaler
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["/bin/bash", "-c", "/app/autoscale.sh"]
+# ENTRYPOINT ["/app/autoscale.sh"]

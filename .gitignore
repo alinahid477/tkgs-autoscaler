@@ -1,0 +1,6 @@
+*.kubeconfig
+*test*
+*nogit*
+
+kubernetes/deployment/autoscaler-deployment.yaml
+kubernetes/deployment/configmap.yaml
