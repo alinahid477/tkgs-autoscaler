@@ -1,5 +1,8 @@
 # TKGs Autoscaler
 
+***This repo is a part of the Merlin initiative (https://github.com/alinahid477/merlin)***
+
+
 ---
 **Disclaimer**: This repository is a Bash-based modest cluster Autoscaler implementation for Tanzu Kubernetes Grid Services running on vSphere with Tanzu.  This process does not replace any official solution provided by the vendor.
 ---
