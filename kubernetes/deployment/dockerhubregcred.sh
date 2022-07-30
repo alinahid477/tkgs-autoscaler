@@ -13,4 +13,4 @@ if [[ -z $namespace ]]
 then
     namespace='default'
 fi
-kubectl create secret docker-registry dockerhubregcred --docker-server=https://index.docker.io/v2/ --docker-username=$1 --docker-password=$2 --docker-email=your@email.com --namespace $namespace
+kubectl create secret docker-registry dockerhubregcred --docker-server=https://index.docker.io/v1/ --docker-username=$1 --docker-password=$2 --docker-email=your@email.com --namespace $namespace
